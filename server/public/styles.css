@@ -12,6 +12,7 @@ body {
   justify-content: center;
   align-items: center;
   background-image: url('/images/goldheader.jpg');
+  /* background-image: url('/images/goldheader2.png'); */
   background-position: bottom;
   background-size: cover;
 }
@@ -46,7 +47,7 @@ body {
   margin: 1em 0 1em 0;
   width: 30%;
   height: 25vh;
-  border: 1px solid black;
+  border-bottom: 1pt solid gold;
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
   /* background-image: url('/images/black.jpg');
   background-size: cover;
@@ -60,7 +61,7 @@ body {
 
 .tile-wrapper:hover {
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 0, 0.2);
+  border-bottom: 1pt solid rgba(255, 217, 0, 0.5);
   box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.8);
   background-color: rgba(0, 0, 0, 0.8);
 }
