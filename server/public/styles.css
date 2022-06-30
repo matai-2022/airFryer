@@ -11,57 +11,68 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/images/header3.jpg');
+  background-image: url('/images/goldheader.jpg');
   background-position: bottom;
   background-size: cover;
 }
 
 .header-title {
-  font-size: 5em;
-  font-family: 'Rubik Moonrocks', cursive;
-  font-weight: lighter;
-  color: black;
-  text-shadow: 2px 3px 3px rgb(255, 255, 255);
+  font-size: 4.8em;
+  /* font-family: 'Rubik Moonrocks', cursive; */
+  /* font-family: 'Dancing Script', cursive; */
+  font-family: 'The Nautigal', cursive;
+
+  font-weight: bold;
+  color: white;
+  /* text-shadow: 2px 3px 3px rgb(255, 255, 255); */
 }
 
 /* header styling */
 
 /* tile list stying */
-.tilelist-wrapper{
-width:100%;
-height: auto;
-background-color: white;
-display: flex;
-flex-wrap: wrap;
-justify-content:space-evenly;
-align-items: center;
+.tilelist-wrapper {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
 }
 /* tile list stying */
-
 
 /* tile styling */
 
 .tile-wrapper {
-  margin: 1em  0 1em 0;
+  margin: 1em 0 1em 0;
   width: 30%;
-  height: 20vh;
+  height: 25vh;
   border: 1px solid black;
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
+  background-image: url('/images/cover.jpg');
+  background-size: cover;
+  background-position: center;
   display: flex;
-  justify-content:center;
-  align-items:center;
+  justify-content: center;
+  align-items: center;
   transition: all ease 500ms;
 }
 
 .tile-wrapper:hover {
-  cursor: pointer;  
-  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 0, 0.2);
+  box-shadow: 3px 5px 4px rgba(0, 0, 0, 0.8);
+}
+
+.tile-title {
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  /* font-family: 'The Nautigal', cursive; */
+  font-size: 2.3em;
+  font-weight: lighter;
 }
 
 /* tile styling */
-
-
-
 
 /* review list styling */
 
@@ -78,7 +89,6 @@ align-items: center;
 }
 
 /* review list styling */
-
 
 /* review styling */
 
@@ -127,12 +137,10 @@ align-items: center;
 }
 
 .review-comment {
-font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 /* review styling */
-
-
 
 /* item styling */
 
@@ -145,8 +153,6 @@ font-size: 1.2em;
 }
 
 /* item styling */
-
-
 
 /* item info styling */
 
@@ -162,8 +168,8 @@ font-size: 1.2em;
 }
 
 .item-title {
- font-size: 3em;
- margin: 0;
+  font-size: 3em;
+  margin: 0;
 }
 
 .item-owner-name {
