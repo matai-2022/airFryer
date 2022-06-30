@@ -3,6 +3,9 @@ import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchFruits, selectFruits } from '../slices/fruits'
 
+// import components:
+import Header from './Header'
+
 function App() {
   const fruits = useSelector(selectFruits)
   const dispatch = useDispatch()
@@ -14,12 +17,12 @@ function App() {
   return (
     <>
       <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
+        <Header />
+        {/* <ul>
           {fruits.map((fruit) => (
             <li key={fruit}>{fruit}</li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </>
   )
