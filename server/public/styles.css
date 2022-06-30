@@ -13,8 +13,9 @@ body {
   align-items: center;
   background-image: url('/images/goldheader.jpg');
   /* background-image: url('/images/goldheader2.png'); */
-  background-position: bottom;
+  background-position: top;
   background-size: cover;
+  border-bottom: 2pt solid white;
 }
 
 .header-title {
@@ -23,7 +24,7 @@ body {
   /* font-family: 'Dancing Script', cursive; */
   font-family: 'The Nautigal', cursive;
   font-weight: bold;
-  /* text-shadow: 1px 1px 1px gold; */
+  text-shadow: -2px -3px 1px rgb(165, 120, 5);
   color: white;
 }
 
