@@ -11,10 +11,10 @@ server.use(express.json())
 server.use(express.static(path.join(__dirname, 'public')))
 
 server.use('/api/v1/fruits', fruitRoutes)
-// //prefix for item routes
-// server.use('/api/v1/items', itemRoutes)
+//prefix for item routes
+server.use('/api/v1/items', itemRoutes)
 
-// //prefix for item routes
-// server.use('/api/v1/items', reviewRoutes)
+//prefix for review routes
+server.use('/api/v1/reviews', reviewRoutes)
 
 module.exports = server

@@ -6,9 +6,9 @@ const router = express.Router()
 
 router.get('/', async (req, res) => {
   try {
-    // const items = await db function goes here
-    // res.json (items)
-    // return null
+    const items = await db.getItems()
+    res.json(items)
+    return null
   } catch (error) {
     res.status(500).send('DATABASE ERROR: ' + error.message)
   }
@@ -24,3 +24,4 @@ router.get('/', async (req, res) => {
 //     res.status(500).send('DATABASE ERROR: ' + error.message)
 //   }
 // })
+module.exports = router
