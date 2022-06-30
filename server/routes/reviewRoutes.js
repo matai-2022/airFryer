@@ -6,7 +6,7 @@ const router = express.Router()
 
 router.get('/', async (req, res) => {
   try {
-    const review = await db.getReviews
+    const review = await db.getReviews()
     res.json(review)
     return null
   } catch (error) {
