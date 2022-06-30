@@ -202,3 +202,34 @@ body {
 }
 
 /* item info styling */
+
+
+
+/* review input styling */
+
+.review-input-wrapper {
+  width: 60%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0.2em;
+
+}
+
+.review-input {
+  width: 100%;
+  height: 3.5em;
+  margin: 0.5em;
+  resize: none;
+  font-family: sans-serif;
+}
+
+.review-input-btn {
+  width: 25%;
+  height: 2em;
+  margin: 0.5em;
+}
+
+/* review input styling */

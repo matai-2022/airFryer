@@ -2,6 +2,7 @@ import React from 'react'
 
 // import components:
 import Review from './Review'
+import ReviewInput from './ReviewInput'
 
 const testData = [
   {
@@ -39,6 +40,7 @@ function ReviewList() {
     <>
       <main className="review-list-wrapper">
         <h2 className='review-list-title'>Reviews .</h2>
+        <ReviewInput />
         {testData.map((review) => {
           return (
             <Review

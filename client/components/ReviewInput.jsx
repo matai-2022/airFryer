@@ -3,7 +3,7 @@ import React from 'react'
 function ReviewInput() {
   return <>
   <section className='review-input-wrapper'>
-    <input className='review-input' />
+    <textarea className='review-input' placeholder='Enter a review?' />
     <button className='review-input-btn'>
       Add review
     </button>
