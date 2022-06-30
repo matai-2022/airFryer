@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('/header3.jpg');
+  background-image: url('/images/header3.jpg');
   background-position: bottom;
   background-size: cover;
 }
@@ -52,3 +52,72 @@ align-items: center;
 }
 
 /* tile styling */
+
+
+
+
+/* review list styling */
+
+.review-list-wrapper {
+  width: 100%;
+  height: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* review list styling */
+
+
+/* review styling */
+
+.review-wrapper {
+  width: 60%;
+  height: auto;
+  border: 1px solid black;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 3em;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.reviewer-info-wrapper {
+  width: 30%;
+  height: 15vh;
+  /* background-color: whitesmoke; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.reviewer-profile-img {
+  width: 40%;
+  height: 55%;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.review-name {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.reviewer-comment-wrapper {
+  width: 70%;
+  height: auto;
+  /* background-color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-comment {
+font-size: 1.2em;
+}
+
+/* review styling */
