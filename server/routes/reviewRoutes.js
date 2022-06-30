@@ -27,4 +27,15 @@ router.get('/:id', async (req, res) => {
   }
 })
 
+router.post('/', async (req, res) => {
+  try {
+    const review = req.body
+    await db.addReview(review)
+    res.sendStatus(201)
+    return null
+  } catch (error) {
+    res.status(500).send('DATABASE ERROR: ' + error.message)
+  }
+})
+
 module.exports = router

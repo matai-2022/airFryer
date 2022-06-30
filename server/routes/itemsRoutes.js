@@ -14,14 +14,14 @@ router.get('/', async (req, res) => {
   }
 })
 
-// router.post('/', async (req, res) => {
-//   try {
-//     const items =req.body
-//     await db function goes here pass through items
-//     res.sendStatus(201)
-//     return null
-//   } catch (error) {
-//     res.status(500).send('DATABASE ERROR: ' + error.message)
-//   }
-// })
+router.post('/', async (req, res) => {
+  try {
+    const item = req.body
+    await db.addItem(item)
+    res.sendStatus(201)
+    return null
+  } catch (error) {
+    res.status(500).send('DATABASE ERROR: ' + error.message)
+  }
+})
 module.exports = router
