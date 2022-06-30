@@ -1,4 +1,5 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
 
 const testData = {
   id: 1,
@@ -7,6 +8,8 @@ const testData = {
 }
 
 function ItemInfo() {
+  const { id } = useParams()
+
   return (
     <>
       <section className="item-info-wrapper">

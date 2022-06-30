@@ -1,25 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { fetchItems, selectItems } from '../slices/items'
 
 // import components:
 import Tile from './Tile'
 
-const testData = [
-  { id: 1, name: 'Phus oil' },
-  { id: 2, name: 'Air fryer' },
-  { id: 3, name: 'Jingjings snacks' },
-  { id: 4, name: 'EDA Crew' },
-  { id: 5, name: 'Docies lemons' },
-  { id: 6, name: 'Eli' },
-  { id: 7, name: 'Eli' },
-  { id: 8, name: 'Eli' },
-]
-
 function TileList() {
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
+  useEffect(async () => {
+    dispatch(fetchItems())
+  }, [])
+  const itemsData = useSelector(selectItems)
+  console.log(itemsData)
+
+  function itemHandler(e, id) {
+    navigate(`/item/${id}`)
+  }
+
   return (
     <>
       <section className="tilelist-wrapper">
-        {testData.map((product) => {
-          return <Tile key={product.id} titleName={product.name} />
+        {itemsData.map((product) => {
+          return (
+            <Tile
+              key={product.id}
+              titleName={product.item_name}
+              itemHandler={(e) => itemHandler(e, product.id)}
+            />
+          )
         })}
       </section>
     </>
