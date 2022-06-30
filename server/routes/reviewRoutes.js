@@ -14,6 +14,17 @@ router.get('/', async (req, res) => {
   }
 })
 
+router.get('/:id', async (req, res) => {
+  try {
+    const id = Number(req.params.id)
+    const specificReviews = await db.getReviewsByItemId(id)
+    res.json(specificReviews)
+    return null
+  } catch (error) {
+    res.status(500).send('DATABASE ERROR: ' + error.message)
+  }
+})
+
 // router.post('/', async (req, res) => {
 //   try {
 //     const reviews =req.body
