@@ -3,6 +3,7 @@ const express = require('express')
 const db = require('../db/reviewsFunc')
 
 const router = express.Router()
+//api endpoint for all reviews
 
 router.get('/', async (req, res) => {
   try {
@@ -13,6 +14,7 @@ router.get('/', async (req, res) => {
     res.status(500).send('DATABASE ERROR: ' + error.message)
   }
 })
+//api endpoint for reviews of specific item
 
 router.get('/:id', async (req, res) => {
   try {
@@ -24,16 +26,5 @@ router.get('/:id', async (req, res) => {
     res.status(500).send('DATABASE ERROR: ' + error.message)
   }
 })
-
-// router.post('/', async (req, res) => {
-//   try {
-//     const reviews =req.body
-//     await db function goes here pass through items
-//     res.sendStatus(201)
-//     return null
-//   } catch (error) {
-//     res.status(500).send('DATABASE ERROR: ' + error.message)
-//   }
-// })
 
 module.exports = router
