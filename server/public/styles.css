@@ -1,5 +1,5 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 /* header styling */
@@ -21,10 +21,9 @@ body {
   /* font-family: 'Rubik Moonrocks', cursive; */
   /* font-family: 'Dancing Script', cursive; */
   font-family: 'The Nautigal', cursive;
-
   font-weight: bold;
+  /* text-shadow: 1px 1px 1px gold; */
   color: white;
-  /* text-shadow: 2px 3px 3px rgb(255, 255, 255); */
 }
 
 /* header styling */
@@ -88,6 +87,13 @@ body {
   justify-content: flex-start;
 }
 
+.review-list-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 2px goldenrod;
+  margin: 0.5em;
+}
+
 /* review list styling */
 
 /* review styling */
@@ -95,8 +101,8 @@ body {
 .review-wrapper {
   width: 90%;
   height: auto;
-  border: 1px solid rgba(0, 0, 0, 0.5);
-  background-color: aliceblue;
+  border-bottom: 2pt solid gold;
+  background-color: black;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -123,11 +129,16 @@ body {
 .review-name {
   margin: 0;
   font-size: 1.2em;
+  font-family: 'Dancing Script', cursive;
+  color: white;
 }
 
 .reviewer-comment-wrapper {
   width: 70%;
   height: auto;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-align: center;
   background-color: white;
   /* border: 1px solid black; */
   border-radius: 0.2em;
@@ -159,7 +170,9 @@ body {
 .item-info-wrapper {
   width: 35%;
   height: 82vh;
-  background-color: aliceblue;
+  background-image: url('/images/item-cover.jpg');
+  background-size: cover;
+  background-position: center;
   border-right: 1px solid rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
@@ -169,11 +182,19 @@ body {
 
 .item-title {
   font-size: 3em;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  font-weight: lighter;
+  max-width: 70%;
+  text-align: center;
   margin: 0;
 }
 
 .item-owner-name {
   margin: 0;
+  color: white;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5em;
 }
 
 /* item info styling */

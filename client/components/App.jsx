@@ -6,6 +6,7 @@ import { fetchFruits, selectFruits } from '../slices/fruits'
 // import components:
 import Header from './Header'
 import TileList from './TileList'
+import Item from './Item'
 
 function App() {
   const fruits = useSelector(selectFruits)
@@ -19,7 +20,8 @@ function App() {
     <>
       <div className="app">
         <Header />
-        <TileList />
+        {/* <TileList /> */}
+        <Item />
       </div>
     </>
   )
