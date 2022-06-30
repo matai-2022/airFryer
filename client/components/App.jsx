@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import {Routes, Route} from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchFruits, selectFruits } from '../slices/fruits'
@@ -20,6 +21,10 @@ function App() {
     <>
       <div className="app">
         <Header />
+        <Routes>
+          <Route path="/" element={<TileList />} />
+          <Route path='/item/:id' element={<Item />}/>
+        </Routes>
         {/* <TileList /> */}
         <Item />
       </div>
