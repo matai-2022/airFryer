@@ -25,8 +25,6 @@ function App() {
           <Route path="/" element={<TileList />} />
           <Route path='/item/:id' element={<Item />}/>
         </Routes>
-        {/* <TileList /> */}
-        <Item />
       </div>
     </>
   )
