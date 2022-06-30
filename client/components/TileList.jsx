@@ -10,6 +10,8 @@ const testData = [
   { id: 4, name: 'EDA Crew' },
   { id: 5, name: 'Docies lemons' },
   { id: 6, name: 'Eli' },
+  { id: 7, name: 'Eli' },
+  { id: 8, name: 'Eli' },
 ]
 
 function TileList() {
