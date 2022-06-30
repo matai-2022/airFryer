@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { getItems } from '../apis/fruits'
+import { getItems } from '../apis/api'
 
-export const fetchItems = createAsyncThunk('fruits/fetchFruits', async () => {
+export const fetchItems = createAsyncThunk('items/fetchItems', async () => {
   return await getItems()
 })
 
@@ -17,17 +17,16 @@ const slice = createSlice({
 export const selectItems = (state) => state.items
 export default slice.reducer
 
+// // tests
+// // _____________________________________________________
 
-// tests
-// _____________________________________________________
+// // console.log('fetch Items', fetchItems)
 
-// console.log('fetch Items', fetchItems)
+// import { useSelector } from 'react-redux'
 
-import {useSelector} from 'react-redux'
+// async function test() {
+//   const items = await fetchItems()
+//   console.log('fetched Items = ', items)
+// }
 
-async function test(){
-  const items = await fetchItems()
-  console.log('fetched Items = ', items)
-}
-
-test()
+// test()
