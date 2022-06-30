@@ -172,10 +172,11 @@ body {
 .item-info-wrapper {
   width: 35%;
   height: 82vh;
-  background-image: url('/images/item-cover.jpg');
+  /* background-image: url('/images/item-cover.jpg');
   background-size: cover;
-  background-position: center;
-  border-right: 1px solid rgba(0, 0, 0, 0.3);
+  background-position: center; */
+  background-color: black;
+  border-right: 2pt solid gold;
   display: flex;
   flex-direction: column;
   justify-content: center;

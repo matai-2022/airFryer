@@ -20,8 +20,8 @@ function App() {
     <>
       <div className="app">
         <Header />
-        <TileList />
-        {/* <Item /> */}
+        {/* <TileList /> */}
+        <Item />
       </div>
     </>
   )
