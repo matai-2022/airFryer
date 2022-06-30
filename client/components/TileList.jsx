@@ -1,7 +1,11 @@
 import React from 'react'
 
 function TileList(){
-  return<></>
+  return<>
+  <section className="tilelist-wrapper">
+    
+  </section>
+  </>
 }
 
 export default TileList
