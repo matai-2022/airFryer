@@ -1,7 +1,13 @@
 import React, { useEffect } from 'react'
+import {Routes, Route} from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 
 import { fetchFruits, selectFruits } from '../slices/fruits'
+
+// import components:
+import Header from './Header'
+import TileList from './TileList'
+import Item from './Item'
 
 function App() {
   const fruits = useSelector(selectFruits)
@@ -14,12 +20,13 @@ function App() {
   return (
     <>
       <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {fruits.map((fruit) => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
+        <Header />
+        <Routes>
+          <Route path="/" element={<TileList />} />
+          <Route path='/item/:id' element={<Item />}/>
+        </Routes>
+        {/* <TileList /> */}
+        <Item />
       </div>
     </>
   )
