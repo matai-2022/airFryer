@@ -1,10 +1,11 @@
 import React from 'react'
 
-function Review() {
+function Review(props) {
   return <>
-  <main className='review-wrapper'>
-    
-  </main>
+  <section className='review-wrapper'>
+    <h3 className='review-name'>{props.name}</h3>
+    <p className='review-comment'>{props.review}</p>
+  </section>
   </>
 }
 
