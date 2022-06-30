@@ -30,7 +30,7 @@ export async function getItemReviews(id) {
   }
 }
 
-export async function postItemReviews(review) {
+export async function postItemReview(review) {
   try {
     await request.post(`${reviewsUrl}`).send(review)
   } catch (error) {

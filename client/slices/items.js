@@ -1,8 +1,12 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { getItems } from '../apis/api'
+import { getItems, postItem } from '../apis/api'
 
 export const fetchItems = createAsyncThunk('items/fetchItems', async () => {
   return await getItems()
+})
+
+export const addItem = createAsyncThunk('items/addItem', async (item) => {
+  return await postItem(item)
 })
 
 const slice = createSlice({
