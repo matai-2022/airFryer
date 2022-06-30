@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 // import components:
 import Review from './Review'
@@ -36,10 +38,12 @@ const testData = [
 ]
 
 function ReviewList() {
+  const { id } = useParams()
+
   return (
     <>
       <main className="review-list-wrapper">
-        <h2 className='review-list-title'>Reviews .</h2>
+        <h2 className="review-list-title">Reviews .</h2>
         <ReviewInput />
         {testData.map((review) => {
           return (

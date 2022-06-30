@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 
 // import components:
 import Tile from './Tile'
@@ -13,6 +14,8 @@ const testData = [
   { id: 7, name: 'Eli' },
   { id: 8, name: 'Eli' },
 ]
+
+useEffect(async () => {}, [])
 
 function TileList() {
   return (
