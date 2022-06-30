@@ -121,3 +121,27 @@ font-size: 1.2em;
 }
 
 /* review styling */
+
+
+/* item info styling */
+
+.item-info-wrapper {
+  width: 35%;
+  height: 82vh;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-title {
+ font-size: 3em;
+ margin: 0;
+}
+
+.item-owner-name {
+  margin: 0;
+}
+
+/* item info styling */

@@ -7,6 +7,7 @@ import { fetchFruits, selectFruits } from '../slices/fruits'
 import Header from './Header'
 import TileList from './TileList'
 import ReviewList from './ReviewList'
+import ItemInfo from './ItemInfo'
 
 function App() {
   const fruits = useSelector(selectFruits)
@@ -21,6 +22,7 @@ function App() {
       <div className="app">
         <Header />
         <TileList />
+        <ItemInfo />
         {/* <ReviewList /> */}
         {/* <ul>
           {fruits.map((fruit) => (
