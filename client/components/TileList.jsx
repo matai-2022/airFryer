@@ -1,28 +1,22 @@
 import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { fetchItems, selectItems } from '../slices/items'
 
 // import components:
 import Tile from './Tile'
 
-const testData = [
-  { id: 1, name: 'Phus oil' },
-  { id: 2, name: 'Air fryer' },
-  { id: 3, name: 'Jingjings snacks' },
-  { id: 4, name: 'EDA Crew' },
-  { id: 5, name: 'Docies lemons' },
-  { id: 6, name: 'Eli' },
-  { id: 7, name: 'Eli' },
-  { id: 8, name: 'Eli' },
-]
-
-useEffect(async () => {}, [])
-
 function TileList() {
+  const dispatch = useDispatch()
+  useEffect(async () => {
+    dispatch(fetchItems())
+  }, [])
+  const itemsData = useSelector(selectItems)
+
   return (
     <>
       <section className="tilelist-wrapper">
-        {testData.map((product) => {
-          return <Tile key={product.id} titleName={product.name} />
+        {itemsData.map((product) => {
+          return <Tile key={product.id} titleName={product.item_name} />
         })}
       </section>
     </>
