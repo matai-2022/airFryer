@@ -38,6 +38,7 @@ function ReviewList() {
   return (
     <>
       <main className="review-list-wrapper">
+        <h2 className='review-list-title'>Reviews</h2>
         {testData.map((review) => {
           return (
             <Review

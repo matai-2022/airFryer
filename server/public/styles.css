@@ -59,8 +59,10 @@ align-items: center;
 /* review list styling */
 
 .review-list-wrapper {
-  width: 100%;
-  height: auto;
+  width: 65%;
+  height: 82vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -74,7 +76,7 @@ align-items: center;
 /* review styling */
 
 .review-wrapper {
-  width: 60%;
+  width: 90%;
   height: auto;
   border: 1px solid black;
   background-color: white;
@@ -121,6 +123,21 @@ font-size: 1.2em;
 }
 
 /* review styling */
+
+
+
+/* item styling */
+
+.item-wrapper {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+/* item styling */
+
 
 
 /* item info styling */
