@@ -234,6 +234,17 @@ color: gold;
   margin: 0.5em;
 }
 
+/* responsive styling for review list */
+@media (min-width: 279px) and (max-width:668px) {
+  .review-list-wrapper  {
+    width: 90%;
+
+  }
+
+}
+/* responsive styling for review list */
+
+
 /* review list styling */
 
 /* review styling */
@@ -306,6 +317,19 @@ color: gold;
   align-items: flex-start;
 }
 
+
+/* responsive styling for item */
+
+@media (min-width: 320px) and (max-width:668px) {
+  .item-wrapper {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+/* responsive styling for item */
+
+
 /* item styling */
 
 /* item info styling */
@@ -365,6 +389,23 @@ color: gold;
   font-size: 1.5em;
 }
 
+/* responsive stling for item info */
+@media (min-width: 279px) and (max-width: 668px) {
+  .item-info-wrapper {
+    width: 100%;
+    height: 30vh;
+  }
+  .item-title {
+    width: 95%;
+  }
+
+  .item-info-return-link {
+    width: 100%;
+  }
+}
+/* responsive stling for item info */
+
+
 /* item info styling */
 
 
@@ -402,6 +443,20 @@ color: gold;
   width: 25%;
   height: 2em;
   margin: 0.5em;
+}
+
+/* responsive styling for review */
+@media (min-width: 320px) and (max-width:668px) {
+  .review-input-wrapper {
+    width: 100%;
+  }
+}
+
+@media (min-width: 668px) and (max-width: 1000px) {
+  .review-input-wrapper {
+    width: 80%;
+    margin: 1em;
+  }
 }
 
 /* review input styling */
