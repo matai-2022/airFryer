@@ -7,28 +7,28 @@ exports.seed = async function (knex) {
       item_id: 1,
       reviewer_name: 'Liam',
       review: 'More pls',
-      profile_image: 'image_url.jpg',
+      profile_image: '/images/profile.png',
     },
     {
       id: 2,
       item_id: 1,
       reviewer_name: 'Tony',
       review: 'More pls',
-      profile_image: 'image_url.jpg',
+      profile_image: '/images/profile.png',
     },
     {
       id: 3,
       item_id: 3,
       reviewer_name: 'Saia',
       review: 'Your air fryer smells',
-      profile_image: 'image_url.jpg',
+      profile_image: '/images/profile.png',
     },
     {
       id: 4,
       item_id: 2,
       reviewer_name: 'Tony',
       review: 'This game gives me so much anxiety ',
-      profile_image: 'image_url.jpg',
+      profile_image: '/images/profile.png',
     },
   ])
 }
