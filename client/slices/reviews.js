@@ -10,8 +10,8 @@ export const fetchItemReviews = createAsyncThunk(
 
 export const addItemReview = createAsyncThunk(
   'itemReviews/addItemReview',
-  async (id) => {
-    return await postItemReview(id)
+  async (review) => {
+    return await postItemReview(review)
   }
 )
 
