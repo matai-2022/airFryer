@@ -63,6 +63,7 @@ function ReviewInput() {
         item_id: id,
         reviewer_name: name,
         review: `This ${item.item_name} is ${adjective}!`,
+        profile_image: image,
       })
     )
       .unwrap()
