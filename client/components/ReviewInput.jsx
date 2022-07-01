@@ -35,27 +35,27 @@ function ReviewInput() {
 
   return (
     <>
-      <form>
-        <section className="review-input-wrapper">
-          <input
-            className=""
-            placeholder="Enter your name"
-            onChange={handleName}
-          />
-          <textarea
-            className="review-input"
-            placeholder="Enter a review?"
-            onChange={handleReview}
-          />
-          <button
-            className="review-input-btn"
-            type="submit"
-            onClick={handleSubmit}
-          >
-            Add review
-          </button>
-        </section>
+      {/* <form> */}
+      <form className="review-input-wrapper">
+        <input
+          className="review-name-input"
+          placeholder="Enter your name"
+          onChange={handleName}
+        />
+        <textarea
+          className="review-input"
+          placeholder="Enter a review?"
+          onChange={handleReview}
+        />
+        <button
+          className="review-input-btn"
+          type="submit"
+          onClick={handleSubmit}
+        >
+          Add review
+        </button>
       </form>
+      {/* </form> */}
     </>
   )
 }
