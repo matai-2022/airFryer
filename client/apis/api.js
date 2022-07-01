@@ -37,3 +37,14 @@ export async function postItemReview(review) {
     console.error(error.message)
   }
 }
+
+const adjectivesURL = 'https://random-word-form.herokuapp.com/random/adjective'
+
+export async function getAdjective() {
+  try {
+    const adjective = await request.get(adjectivesURL)
+    return adjective
+  } catch (error) {
+    console.error(error.message)
+  }
+}
