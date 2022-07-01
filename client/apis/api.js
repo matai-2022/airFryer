@@ -38,7 +38,18 @@ export async function postItemReview(review) {
   }
 }
 
-export async function getRandomDogImage(){
+const adjectivesURL = 'https://random-word-form.herokuapp.com/random/adjective'
+
+export async function getAdjective() {
+  try {
+    const adjective = await request.get(adjectivesURL)
+    return adjective
+  } catch (error) {
+    console.error(error.message)
+  }
+}
+
+export async function getRandomDogImage() {
   try {
     let image = await request.get('https://dog.ceo/api/breeds/image/random')
     console.log(image.body.message)

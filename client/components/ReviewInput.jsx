@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { addItemReview, fetchItemReviews } from '../slices/reviews'
-import { useDispatch } from 'react-redux'
+import {
+  addItemReview,
+  fetchAdjective,
+  fetchItemReviews,
+} from '../slices/reviews'
+import { useDispatch, useSelector } from 'react-redux'
 import { getRandomDogImage } from '../apis/api'
 
 function ReviewInput() {
@@ -10,6 +14,9 @@ function ReviewInput() {
   const [image, setImage] = useState('')
   const dispatch = useDispatch()
   const { id } = useParams()
+
+  const itemData = useSelector((state) => state.items)
+  const item = itemData.find((item) => item.id === Number(id))
 
   useEffect(async () => {
     const dog = await getRandomDogImage()
@@ -46,29 +53,59 @@ function ReviewInput() {
       })
   }
 
+  async function handleRandomReview(event) {
+    event.preventDefault()
+    const adjectivePromise = await dispatch(fetchAdjective())
+    const adjectiveArray = adjectivePromise.payload.body
+    const adjective = adjectiveArray[0]
+    dispatch(
+      addItemReview({
+        item_id: id,
+        reviewer_name: name,
+        review: `This ${item.item_name} is ${adjective}!`,
+      })
+    )
+      .unwrap()
+      .then(() => {
+        dispatch(fetchItemReviews(id))
+      })
+      .catch((err) => {
+        console.error(err.message)
+      })
+  }
+
+  console.log(id, 'this is itemID')
+
   return (
     <>
-      {/* <form> */}
-      <form className="review-input-wrapper">
-        <input
-          className="review-name-input"
-          placeholder="Enter your name"
-          onChange={handleName}
-        />
-        <textarea
-          className="review-input"
-          placeholder="Enter a review?"
-          onChange={handleReview}
-        />
-        <button
-          className="review-input-btn"
-          type="submit"
-          onClick={handleSubmit}
-        >
-          Add review
-        </button>
+      <form>
+        <section className="review-input-wrapper">
+          <input
+            className=""
+            placeholder="Enter your name"
+            onChange={handleName}
+          />
+          <textarea
+            className="review-input"
+            placeholder="Enter a review?"
+            onChange={handleReview}
+          />
+          <button
+            className="review-input-btn"
+            type="submit"
+            onClick={handleSubmit}
+          >
+            Add review
+          </button>
+          <button
+            className="review-input-btn"
+            type="submit"
+            onClick={handleRandomReview}
+          >
+            Add random review
+          </button>
+        </section>
       </form>
-      {/* </form> */}
     </>
   )
 }

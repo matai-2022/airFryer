@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { getItemReviews, postItemReview } from '../apis/api'
+import { getAdjective, getItemReviews, postItemReview } from '../apis/api'
 
 export const fetchItemReviews = createAsyncThunk(
   'itemReviews/fetchItemReviews',
@@ -15,12 +15,21 @@ export const addItemReview = createAsyncThunk(
   }
 )
 
+export const fetchAdjective = createAsyncThunk(
+  'itemReviews/fetchAdjective',
+  async () => {
+    return await getAdjective()
+  }
+)
+
 const slice = createSlice({
   name: 'itemReviews',
   initialState: [],
   reducers: {},
   extraReducers: {
     [fetchItemReviews.fulfilled]: (state, { payload }) => payload,
+
+    // [fetchAdjective.fulfilled]: (state, { payload }) => payload,
   },
 })
 
