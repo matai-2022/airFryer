@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
+import { selectItemReviews, fetchItemReviews } from '../slices/reviews'
 
 // import components:
 import Review from './Review'
@@ -39,6 +40,13 @@ const testData = [
 
 function ReviewList() {
   const { id } = useParams()
+  console.log(id, ' this is id')
+  const dispatch = useDispatch()
+  const reviewData = useSelector()
+  useEffect(async () => {
+    dispatch(fetchItemReviews(id))
+  }, [])
+  console.log(reviewData, 'this is reviewData')
 
   return (
     <>
@@ -52,6 +60,7 @@ function ReviewList() {
               name={review.reviewer_name}
               review={review.review}
               profileImg={review.profile_image}
+              // dataId={id}
             />
           )
         })}
