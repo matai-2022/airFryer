@@ -8,7 +8,11 @@ function Tile(props) {
     <>
       <section className="tile-wrapper" onClick={props.itemHandler}>
         <h2 className="tile-title">{props.titleName}</h2>
-        <button type="button" onClick={handleDelete}>
+        <button
+          className="tile-delete-btn"
+          type="button"
+          onClick={handleDelete}
+        >
           Delete
         </button>
       </section>
