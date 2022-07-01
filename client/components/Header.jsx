@@ -4,7 +4,7 @@ function Header() {
   return (
     <>
       <header className="header-wrapper">
-        <h1 className="header-title">Air Fryer</h1>
+        <h1 className="header-title">Sharing is Caring</h1>
       </header>
     </>
   )
