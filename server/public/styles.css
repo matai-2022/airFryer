@@ -424,7 +424,15 @@ color: gold;
 }
 
 .review-name-input {
-  width: 100%;
+  width: 80%;
+  height: 1.5em;
+  margin: 0.5em;
+  resize: none;
+  font-family: sans-serif;
+}
+
+.review-input-a {
+  width: 60%;
   height: 1.5em;
   margin: 0.5em;
   resize: none;
@@ -432,7 +440,7 @@ color: gold;
 }
 
 .review-input {
-  width: 100%;
+  width: 60%;
   height: 3.5em;
   margin: 0.5em;
   resize: none;
@@ -440,7 +448,7 @@ color: gold;
 }
 
 .review-input-btn {
-  width: 25%;
+  width: 30%;
   height: 2em;
   margin: 0.5em;
 }
