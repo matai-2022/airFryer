@@ -37,3 +37,13 @@ export async function postItemReview(review) {
     console.error(error.message)
   }
 }
+
+export async function getRandomDogImage(){
+  try {
+    let image = await request.get('https://dog.ceo/api/breeds/image/random')
+    console.log(image.body.message)
+    return image.body.message
+  } catch (error) {
+    console.error(error.message)
+  }
+}
