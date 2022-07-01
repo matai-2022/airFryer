@@ -1,13 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit'
-// import fruits from './slices/fruits'
+
 import items from './slices/items'
-// import reviews from './slices/reviews'
+import reviews from './slices/reviews'
+import page from './slices/page'
 
 const store = configureStore({
   reducer: {
-    // fruits,
     items,
-    // reviews,
+    reviews,
+    page,
   },
 })
 
