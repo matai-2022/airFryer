@@ -5,6 +5,7 @@ import { fetchItems, selectItems } from '../slices/items'
 
 // import components:
 import Tile from './Tile'
+import AddTile from './AddTile'
 
 function TileList() {
   const navigate = useNavigate()
@@ -32,6 +33,7 @@ function TileList() {
           )
         })}
       </section>
+      <AddTile />
     </>
   )
 }
