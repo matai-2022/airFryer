@@ -90,6 +90,7 @@ body {
   justify-content: center;
   align-items: center;
   transition: all ease 500ms;
+  border-radius: 10px;
 }
 
 .tile-wrapper:hover {
