@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import {
   addItemReview,
@@ -6,15 +6,22 @@ import {
   fetchItemReviews,
 } from '../slices/reviews'
 import { useDispatch, useSelector } from 'react-redux'
+import { getRandomDogImage } from '../apis/api'
 
 function ReviewInput() {
   const [name, setName] = useState('')
   const [review, setReview] = useState('')
+  const [image, setImage] = useState('')
   const dispatch = useDispatch()
   const { id } = useParams()
 
   const itemData = useSelector((state) => state.items)
   const item = itemData.find((item) => item.id === Number(id))
+
+  useEffect(async () => {
+    const dog = await getRandomDogImage()
+    setImage(dog)
+  }, [])
 
   function handleName(event) {
     setName(event.target.value)
@@ -26,8 +33,16 @@ function ReviewInput() {
 
   function handleSubmit(event) {
     event.preventDefault()
+    setName('')
+    setReview('')
+    console.log('this is fogg ', image)
     dispatch(
-      addItemReview({ item_id: id, reviewer_name: name, review: review })
+      addItemReview({
+        item_id: id,
+        reviewer_name: name,
+        review: review,
+        profile_image: image,
+      })
     )
       .unwrap()
       .then(() => {

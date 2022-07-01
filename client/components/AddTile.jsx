@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { addItem, fetchItems } from '../slices/items'
 
@@ -17,8 +17,12 @@ function AddTile() {
 
   function handleSubmit(e) {
     e.preventDefault()
+
     dispatch(
-      addItem({ item_name: itemName, contributor_name: contributorName })
+      addItem({
+        item_name: itemName,
+        contributor_name: contributorName,
+      })
     )
       .unwrap()
       .then(() => {

@@ -29,9 +29,11 @@ function ItemInfo() {
             Back to menu
           </button>
         </section>
+        <br></br>
+        <img src="../images/stars.svg"></img>
       </section>
     </>
   )
-}
+  }
 
 export default ItemInfo
