@@ -2,6 +2,13 @@ body {
   /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
 }
 
+.app {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 /* header styling */
 
 .header-wrapper {
@@ -76,6 +83,36 @@ body {
 }
 
 /* tile styling */
+
+
+/* add tile styling */
+
+.add-tile-wrapper {
+  width: 80%;
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-bottom: 2pt solid gold;
+  margin: 1em;
+}
+
+.add-tile-input {
+  width: 50%;
+  height: 17%;
+  border: none;
+}
+
+.add-tile-btn {
+  width: 15%;
+  height: 2em;
+  margin: 0.5em;
+}
+
+/* add tile styling */
+
 
 /* review list styling */
 
@@ -195,6 +232,30 @@ body {
   max-width: 70%;
   text-align: center;
   margin: 0;
+}
+
+.item-link-wrapper {
+  width:50%;
+  height:10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-info-return-link {
+  color: gold;
+  font-size:1.6em;
+  font-weight: lighter;
+  font-family: 'Dancing Script', cursive;
+  background-color: transparent;
+  padding: 0.1em 0.5em 0.1em 0.5em;
+  transition: all ease 500ms;
+  border: none;
+  text-decoration: underline;
+}
+
+.item-info-return-link:hover {
+  cursor: pointer;
 }
 
 .item-owner-name {
