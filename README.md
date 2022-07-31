@@ -25,10 +25,9 @@ You can find the server running on [http://localhost:3000](http://localhost:3000
 
 This repo includes:
 
-- a single, simple API endpoint (`/api/v1/fruits`)
-- a single React component (`<App />`)
-- an example database module (`server/db/fruits.js`)
-- an API client module (`client/apis/fruits.js`)
+- two API endpoints (`/api/v1/items` and `/api/v1/reviews`)
+- React components
+- two database modules (`server/db/reviewsFunc.js` and `server/db/itemsFunc.js`)
+- an API client module (`client/apis/api.js`)
 - configuration for Jest and testing library
 - configuration for server-side debugging in VS Code
-- a single client-side test (`client/components/App.test.js`)
